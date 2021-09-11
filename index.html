@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b5d4a6df52.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootsrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Today's Weather by Colette</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-xs-1 col-sm-4"> 
+        <div class="row">
+          <div class="col"  
+            <p><span class="currentDate" id="current-date"></span></p>
+          </div>
+          <!-- <div class="col">
+            <p class="degreeLink"><a href ="#" class="celsiusLink" id="celsius-link">°C</a> | <a href ="#" class="farenheitLink" id="fahrenheit-link">°F</a></p>
+           </div> -->
+        </div>
+        <div class="row">
+        <form class="changeCity" id="change-city">
+            <input
+              type="text"
+              placeholder=" Where are you now?"
+              id="enter-new-city"
+              class="enterNewCity"
+            />
+            <input type="submit" value=" 🔎 " class="submitButton" />
+            <!-- <button 
+              style="float: right;"
+              type="button" 
+              class="current-button" 
+              id="current-location-button">📍</button>
+          </form>-->
+        </div>
+          <br />
+            <h2 span class=currentCity" id="current-city"></span>
+            </h2>
+              <i class="fas fa-sun sun-icon main-icon"></i>
+          <h1 id="temperature-main"></h1>
+          <p class="feelsLike"><span id="weather-description"></span><br /><span id="feels-like"></span></p>
+          <br />
+          <div class="row">
+            <div class="col">
+              <center>
+                <i class="fas fa-cloud-sun sun-cloud-icon"></i>
+    
+                <p>18°C<br />Sat</p>
+              </center>
+            </div>
+            <div class="col">
+              <center>
+                <i class="fas fa-cloud cloud-icon"></i>
+    
+                <p>15°C<br />Sun</p>
+              </center>
+            </div>
+            <div class="col">
+              <center>
+                <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
+    
+                <p>21°C<br />Mon</p>
+              </center>
+            </div>
+            <div class="col">
+                <center>
+                  <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
+      
+                  <p>18°C<br />Tue</p>
+                </center>
+              </div><div class="col">
+                  <center>
+                    <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
+        
+                    <p>17°C<br />Wed</p>
+                  </center>
+                </div>
+      </div></div>
+    <br />
+    <footer>Coded by <a href="https://www.linkedin.com/in/colette-st-onge/" class="linkedIn">Colette G. St-Onge</a></footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
