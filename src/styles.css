@@ -26,6 +26,17 @@ footer {
   text-align: center;
   color: #ededed;
 }
+a {
+  font-family: monospace;
+  text-align: center;
+  color: #ededed;
+  text-decoration: none;
+}
+a:hover {
+  font-family: monospace;
+  text-align: center;
+  color: #33eaf5;
+}
 .degreeLink {
   text-align: right;
 }
@@ -108,14 +119,4 @@ footer {
   font-size: 25px;
   padding: 5px;
 }
-.linkedIn {
-  font-family: monospace;
-  text-align: center;
-  color: #ededed;
-  text-decoration: none;
-}
-.linkedIn:hover {
-  font-family: monospace;
-  text-align: center;
-  color: #33eaf5;
-}
+
