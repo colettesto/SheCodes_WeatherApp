@@ -19,6 +19,8 @@ p.feelsLike {
   color: #989898;
   font-size: 15px;
   text-align: center;
+}
+p.feelsLike:first-letter {
   text-transform: capitalize;
 }
 footer {

@@ -15,7 +15,7 @@ function formatDate(liveDate) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[now.getDay()];
   let months = [
@@ -30,7 +30,7 @@ function formatDate(liveDate) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
   let month = months[now.getMonth()];
   let date = now.getDate();
@@ -53,6 +53,9 @@ function displayWeatherCondition(response) {
   document.querySelector("#feels-like").innerHTML = `Feels like ${Math.round(
     response.data.main.feels_like
   )}°C`;
+  document.querySelector("#wind-speed").innerHTML = `Wind speed is ${Math.round(
+    response.data.wind.speed
+  )} km/h`;
 }
 
 function searchCity(city) {
