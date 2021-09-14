@@ -42,6 +42,11 @@ function formatDate(liveDate) {
 
 function displayWeatherCondition(response) {
   console.log(response);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   document.querySelector(
     "#current-city"
   ).innerHTML = `Today's weather in ${response.data.name}`;

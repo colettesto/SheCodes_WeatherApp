@@ -3,7 +3,7 @@ body {
 }
 h1 {
   color: #727272;
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
 }
 h2 {
@@ -93,12 +93,10 @@ a:hover {
   box-shadow: 0 4px 10px 0 rgb(0 0 0 / 15%);
   min-width: 430px;
 }
-.main-icon {
+.mainIcon {
   display: block;
-  color: #f6d134 !important;
-  font-size: 140px !important;
-  padding: 5px;
-  text-align: center !important;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .sun-icon {
