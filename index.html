@@ -25,15 +25,10 @@
     <div class="container">
       <div class="col-xs-1 col-sm-4"> 
         <div class="row">
-          <div class="col">  
             <p><span class="currentDate" id="current-date"></span></p>
-          </div>
-          <!-- <div class="col">
-            <p class="degreeLink"><a href ="#" class="celsiusLink" id="celsius-link">°C</a> | <a href ="#" class="farenheitLink" id="fahrenheit-link">°F</a></p>
-           </div> -->
         </div>
         <div class="row">
-        <form class="changeCity" id="change-city">
+          <form class="changeCity" id="change-city">
             <input
               type="text"
               placeholder=" Where are you now?"
@@ -49,50 +44,56 @@
           </form>-->
         </div>
           <br />
-            <h2 span class="currentCity" id="current-city"></span>
-            </h2>
-              <img src="" class="mainIcon" id="icon"/>
+          <h2 span class="currentCity" id="current-city"></span>
+          </h2>
+          <img src="" class="mainIcon" id="icon"/>
           <h1 id="temperature-main"></h1>
-          <p class="feelsLike"><span id="weather-description"></span><br /><span id="wind-speed"></span><br /><span id="feels-like"></span></p>
-          <br />
+          <p class="degreeLink"><a href ="#" id="celsius-link">°C</a> | <a href ="#" id="fahrenheit-link">°F</a></p>
           <div class="row">
             <div class="col">
-              <center>
-                <i class="fas fa-cloud-sun sun-cloud-icon"></i>
-    
-                <p>20°C<br />Sat</p>
-              </center>
+             <p class="weatherDetails"><span id="weather-description"></span><br /><span id="wind-speed"></span></p>
             </div>
             <div class="col">
-              <center>
-                <i class="fas fa-cloud cloud-icon"></i>
-    
-                <p>15°C<br />Sun</p>
-              </center>
+              <p class="feelsLike"><span id="feels-like"></span><br /><span id="max-temp"></span></p>
             </div>
-            <div class="col">
-              <center>
-                <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
-    
-                <p>21°C<br />Mon</p>
-              </center>
-            </div>
-            <div class="col">
-                <center>
-                  <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
-      
-                  <p>18°C<br />Tue</p>
-                </center>
-              </div><div class="col">
-                  <center>
-                    <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
-        
-                    <p>17°C<br />Wed</p>
-                  </center>
-                </div>
-      </div></div>
-    <br />
-    <footer><a href="https://github.com/colettesto/SheCodes_WeatherApp">Open-source code</a> by <a href="https://www.linkedin.com/in/colette-st-onge/" class="linkedIn">Colette G. St-Onge</a></footer>
-    <script src="src/index.js"></script>
+          </div>
+          <hr />
+        <div class="row">
+          <div class="col">
+            <center>
+            <i class="fas fa-cloud-sun sun-cloud-icon"></i>
+            <p>20°C<br />Sat</p>
+            </center>
+          </div>
+          <div class="col">
+            <center>
+            <i class="fas fa-cloud cloud-icon"></i>
+            <p>15°C<br />Sun</p>
+            </center>
+          </div>
+          <div class="col">
+            <center>
+            <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
+            <p>21°C<br />Mon</p>
+            </center>
+          </div>
+          <div class="col">
+            <center>
+            <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
+            <p>18°C<br />Tue</p>
+            </center>
+          </div>
+          <div class="col">
+            <center>
+            <i class="fas fa-cloud-sun-rain sun-rain-icon"></i>
+            <p>17°C<br />Wed</p>
+            </center>
+          </div>
+        </div>
+        </div>
+      <br />
+      <footer><a href="https://github.com/colettesto/SheCodes_WeatherApp" class="footer">Open-source code</a> by <a href="https://www.linkedin.com/in/colette-st-onge/" class="linkedIn">Colette G. St-Onge</a></footer>
+    </div>
+  <script src="src/index.js"></script>  
   </body>
 </html>
