@@ -40,10 +40,59 @@ function formatDate(liveDate) {
   return `Last updated at ${hour}:${minutes}<br /> ${day}, ${month} ${date}, ${year}`;
 }
 
+// weather API forecaste format day function
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 // Weather API function
 
-function displayWeatherCondition(response) {
+function displayForecast(response) {
   console.log(response);
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
+        <div class="weatherForecastDay">
+          ${formatDay(forecastDay.dt)}
+        </div>
+        <div class="weatherForecastIcon">
+          <img src="icons/${forecastDay.weather[0].icon}.svg">
+        </div>
+        <div class="weatherForecastTemp">
+          <span class="weatherForecastTempMax"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+          <span class="weatherForecastTempMin"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
+        </div>
+        
+      </div>
+    `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "010d8cb5801bfb8326097d9cc4ca0bf7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.svg`);
   document.querySelector(
@@ -57,13 +106,14 @@ function displayWeatherCondition(response) {
     response.data.weather[0].description;
   document.querySelector("#feels-like").innerHTML = `Feels like: ${Math.round(
     response.data.main.feels_like
-  )}°C`;
+  )}°`;
   document.querySelector("#wind-speed").innerHTML = `Wind speed: ${Math.round(
     response.data.wind.speed
   )} km/h`;
   document.querySelector("#max-temp").innerHTML = `High today: ${Math.round(
     response.data.main.temp_max
-  )}°C`;
+  )}°`;
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -76,9 +126,8 @@ function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#enter-new-city").value;
   searchCity(city);
-  console.log(city);
 }
-// Degree converter function
+// Degree converter function - NOT IN USE
 
 function displayFarenheitTemperature(event) {
   event.preventDefault();
@@ -104,16 +153,16 @@ currentDate.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#change-city");
 searchForm.addEventListener("submit", handleSubmit);
 
-// Degree converter global variables
+// Degree converter global variables - FUNCTION REMOVED
 
-let farenheitLink = document.querySelector("#fahrenheit-link");
-farenheitLink.addEventListener("click", displayFarenheitTemperature);
+// let farenheitLink = document.querySelector("#fahrenheit-link");
+// farenheitLink.addEventListener("click", displayFarenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+// let celsiusLink = document.querySelector("#celsius-link");
+// celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-let celsiusTemperature = null;
+// let celsiusTemperature = null;
 
 // Universal start variable
 
-searchCity("Vancouver");
+searchCity("Cambridge,UK");

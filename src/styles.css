@@ -5,6 +5,7 @@ h1 {
   color: #727272;
   font-size: 80px;
   text-align: center;
+  line-height: 75%;
 }
 h2 {
   color: #727272;
@@ -30,6 +31,9 @@ p.feelsLike:first-letter {
 }
 p.weatherDetails {
   text-align: right;
+}
+hr {
+  opacity: 0.1;
 }
 footer {
   font-family: monospace;
@@ -127,4 +131,17 @@ footer a:hover {
   color: #f68134;
   font-size: 25px;
   padding: 5px;
+}
+.weatherForecast {
+  color: #989898;
+  font-size: 15px;
+  text-align: center;
+}
+.weatherForecastTempMin {
+  opacity: 0.6;
+}
+.weatherForecastIcon {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
