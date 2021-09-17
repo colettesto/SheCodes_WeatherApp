@@ -141,7 +141,5 @@ footer a:hover {
   opacity: 0.6;
 }
 .weatherForecastIcon {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
+  text-align: center;
 }
