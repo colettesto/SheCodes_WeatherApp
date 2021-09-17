@@ -23,16 +23,13 @@ p a:hover {
   color: #33eaf5;
 }
 p.feelsLike {
-  text-align: right;
+  text-align: left;
 }
 p.feelsLike:first-letter {
   text-transform: capitalize;
 }
 p.weatherDetails {
-  text-align: left;
-}
-p.weatherDetails:first-letter {
-  text-transform: capitalize;
+  text-align: right;
 }
 footer {
   font-family: monospace;
@@ -51,7 +48,7 @@ footer a:hover {
   color: #33eaf5;
 }
 .degreeLink {
-  text-align: center;
+  text-align: right;
 }
 
 .enterNewCity {
@@ -108,7 +105,8 @@ footer a:hover {
 .mainIcon {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  width: 65%;
+  height: auto;
 }
 .sun-icon {
   color: #f68134;
