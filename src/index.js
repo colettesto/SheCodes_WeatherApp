@@ -40,13 +40,12 @@ function formatDate(liveDate) {
   return `Last updated at ${hour}:${minutes}<br /> ${day}, ${month} ${date}, ${year}`;
 }
 
-// weather API forecaste format day function
+// weather API forecast format day function
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
   return days[day];
 }
 
@@ -127,20 +126,21 @@ function handleSubmit(event) {
   let city = document.querySelector("#enter-new-city").value;
   searchCity(city);
 }
+
 // Degree converter function - NOT IN USE
 
-function displayFarenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature-main");
-  temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
-}
+// function displayFarenheitTemperature(event) {
+//  event.preventDefault();
+//  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+// let temperatureElement = document.querySelector("#temperature-main");
+// temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
+//}
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-main");
-  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-}
+// function displayCelsiusTemperature(event) {
+//  event.preventDefault();
+//  let temperatureElement = document.querySelector("#temperature-main");
+//  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
+//}
 
 // Date and time global variables
 
