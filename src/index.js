@@ -48,7 +48,7 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.svg`);
   document.querySelector(
     "#current-city"
-  ).innerHTML = `Today's weather in ${response.data.name}`;
+  ).innerHTML = `in ${response.data.name}`;
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature-main").innerHTML = `${Math.round(
     celsiusTemperature
